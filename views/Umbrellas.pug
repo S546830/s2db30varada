@@ -1,0 +1,33 @@
+extends layout
+block content
+  h1= title
+  p Welcome to the Umbrellas 
+  div(class="container-fluid")
+        div(class="row")
+            -
+                let Umbrellas = [
+                    {
+                        "Itemname": "Plastic Umbrellas",
+                        "Quantity": 22,
+                        "price": "Fifteen USD"
+                    },
+                    {
+                        "Itemname": "Silk Umbrellas",
+                        "Quantity": 40,
+                        "price": "Twenty USD"
+                    },
+                    {
+                        "Itemname": "Nylon Umbrellas",
+                        "Quantity": 15,
+                        "price": "Twenty Two USD"
+                    },                   
+                ]
+            each v,index in Umbrellas
+                div(class="col-sm-2" onclick=`buy(${index})`) #{v.Itemname}
+                div(class="col-sm-2" onclick=`buy(${index})`) #{v.Quantity}
+                div(class="col-sm-2" onclick=`buy(${index})`) #{v.price}
+  script.                
+        function buy(intemNo)
+        {
+              alert(`you purchased Item ${intemNo+1}`)
+        }
