@@ -6,3 +6,20 @@ body {
 a {
   color: #00B7FF;
 }
+.umbrellasAttr { 
+  background-color: aquamarine; 
+  width: 120px; 
+  box-sizing:border-box;
+  border-style:double;
+  border-color:rgb(76 201 173/74%);
+  border-radius:5px;
+  border-width:thick;
+} 
+.values{
+  border:outset;
+  width:200px;
+  border-color:aquamarine;
+  margin-top:12px;
+  margin-bottom:12px;
+}
+ 
